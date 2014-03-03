@@ -1,0 +1,35 @@
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts >
+
+	 <constant name="struts.devMode" value="true" /> <!-- devMod : Developer Mode -->
+
+    <package name="default" extends="struts-default" namespace="/">
+		
+		
+		<interceptors>
+			<interceptor name="auth" class="com.rms.interceptors.AuthenticationInterceptor"></interceptor>
+		</interceptors>		
+		
+	
+        <action name="login" class="com.rms.action.LoginModule" method="execute" >
+        	<result name="success">index.jsp</result>
+        	<result name="error">index.jsp</result>
+        </action>
+
+
+    	<action name="rooms" class="com.rms.logic.RoomsOp">
+    		<interceptor-ref name="auth"></interceptor-ref>
+            <result name="success">rentStats.jsp</result>
+        </action>
+
+
+        <action name="demo" class="com.rms.action.Welcome">
+            <result name="success">index.jsp</result>            
+        </action>
+
+    </package>
+</struts>

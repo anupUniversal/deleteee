@@ -21,17 +21,10 @@ public class Room {
 */
 	
 
-	@Id
-	private int id;
-	
-	@Column(name = "type")
-	private String type;
-	
-	@Column(name = "room_name")
-	private String roomName;
-	
-	@Column(name = "features")
-	private String features;
+	@Id	private int id;
+	@Column(name = "type")		private String type;
+	@Column(name = "room_name")	private String roomName;
+	@Column(name = "features")	private String features;
 	
 	
 	

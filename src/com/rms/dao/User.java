@@ -1,7 +1,13 @@
 package com.rms.dao;
 
 public class User {
+	
 	private String user;
+	private String userName;
+	private String password;
+	
+	
+	
 	public String getUser() {
 		return user;
 	}
@@ -20,8 +26,6 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	private String userName;
-	private String password;
-	
+
 	
 }

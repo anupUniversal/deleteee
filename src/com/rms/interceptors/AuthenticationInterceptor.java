@@ -9,6 +9,11 @@ import com.rms.dao.User;
 
 public class AuthenticationInterceptor implements Interceptor {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub

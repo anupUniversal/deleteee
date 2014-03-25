@@ -1,7 +1,9 @@
-
+<?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
     "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
     "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+
 
 <struts >
 
@@ -14,6 +16,7 @@
 			<interceptor name="auth" class="com.rms.interceptors.AuthenticationInterceptor"></interceptor>
 		</interceptors>		
 		
+		
 	
         <action name="login" class="com.rms.action.LoginModule" method="execute" >
         	<result name="success">index.jsp</result>
@@ -22,13 +25,34 @@
 
 
     	<action name="rooms" class="com.rms.logic.RoomsOp">
-    		<interceptor-ref name="auth"></interceptor-ref>
+    		<!-- <interceptor-ref name="auth"></interceptor-ref> -->
             <result name="success">rentStats.jsp</result>
         </action>
 
 
-        <action name="demo" class="com.rms.action.Welcome">
-            <result name="success">index.jsp</result>            
+
+		<action name="deleteRoom" method="delRoom" class="com.rms.logic.RoomsOp">
+            <result name="success">/rentStats.jsp</result>            
+        </action>
+        
+        <action name="addRoom" method="addRoom" class="com.rms.logic.RoomsOp">
+            <result name="success">/rentStats.jsp</result>            
+        </action>
+
+ 			<!-- TENANT ACTIONS  -->
+
+    	<action name="tenants" class="com.rms.logic.TenantOp">
+    		<!-- <interceptor-ref name="auth"></interceptor-ref> -->
+            <result name="success">tenantStat.jsp</result>
+        </action>
+
+
+		<action name="deleteTenant" method="delTenant" class="com.rms.logic.TenantOp">
+            <result name="success">/tenantStat.jsp</result>            
+        </action>
+        
+        <action name="addTenant" method="addTenant" class="com.rms.logic.TenantOp">
+            <result name="success">/tenantStat.jsp</result>            
         </action>
 
     </package>

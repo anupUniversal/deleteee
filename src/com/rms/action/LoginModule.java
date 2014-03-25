@@ -19,6 +19,10 @@ import com.rms.logic.Login;
 
 public class LoginModule extends ActionSupport  implements SessionAware, ModelDriven<User>
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String errorMessage;
 	String username;
 	String password;

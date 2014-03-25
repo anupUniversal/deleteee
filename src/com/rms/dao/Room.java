@@ -29,8 +29,10 @@ public class Room {
 	
 	
 	
-	
-	
+	@Override
+	public String toString() {
+		return roomName + " " + type + " " + features ;		
+	}
 	
 	public int getId() {
 		return id;

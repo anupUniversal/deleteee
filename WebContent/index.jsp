@@ -8,12 +8,15 @@
 <title>RMS</title>
 </head>
 <body>
-	Hello
-	<a href="demo">click here</a>
-	
-	<a href="rooms">Room</a>
+
+	<div>
+		<a href="/EasyLease/rooms">Room</a>
+		<a href="/EasyLease/tenants">Tenant</a>
+		<a href="/EasyLease/tenants">Tenant</a>
+	</div>
 	
 	User : ${ session.user } <s:property value="#session.user" />
+	
 	<br>
 	${ errorMessage }
 	
